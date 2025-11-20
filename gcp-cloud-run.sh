@@ -158,8 +158,8 @@ get_telegram_ids() {
 get_user_input() {
     echo; info "=== Service Configuration ==="
     while true; do read -p "Enter service name: " SERVICE_NAME; [[ -n "$SERVICE_NAME" ]] && break; done
-    while true; do read -p "Enter UUID [default: 9c910024-714e-4221-81c6-41ca9856e7ab]: " UUID
-        UUID=${UUID:-"9c910024-714e-4221-81c6-41ca9856e7ab"}
+    while true; do read -p "Enter UUID [default: f6fff828-bb34-437b-ab83-9180013cbce8]: " UUID
+        UUID=${UUID:-"f6fff828-bb34-437b-ab83-9180013cbce8"}
         validate_uuid "$UUID" && break
     done
     if [[ "$TELEGRAM_DESTINATION" != "none" ]]; then
@@ -248,7 +248,7 @@ main() {
 
     # ===== Clone repo =====
 [[ -d "gcp-v2ray" ]] && rm -rf gcp-v2ray
-git clone https://github.com/andrewzinkyaw/gcp-v2ray.git
+git clone https://github.com/FaclonTeam/gcp-v2ray.git
 cd gcp-v2ray
 
 # ===== Build image =====
